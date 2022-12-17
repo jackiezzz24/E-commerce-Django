@@ -40,9 +40,14 @@ INSTALLED_APPS = [
     'store',  #Django app
     'cart', #Django app
     'account', #Django app
+    'payment', #Django app
     'mathfilters',
     'crispy_forms',
 ]
+
+# Unblock Paypal popups
+SECURE_CROSS_ORIGIN_OPENER_POLICY='same-origin-allow-popups'
+
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -148,5 +153,5 @@ EMAIL_PORT = '587'
 EMAIL_USE_TLS = 'True'
 
 EMAIL_HOST_USER = 'jiaqi.zhao24@gmail.com'  
-EMAIL_HOST_PASSWORD = 'cevpsxwgwlavneuf'
+EMAIL_HOST_PASSWORD = 'znzkxmkgwqilgbft'
 
