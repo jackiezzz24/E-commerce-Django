@@ -171,7 +171,7 @@ AWS_SECRET_ACCESS_KEY = ""
 
 # S3 configuration settings
 
-AWS_STORAGE_BUCKET_NAME = 'smartcart-1'
+AWS_STORAGE_BUCKET_NAME = 'smartcartapp-1'
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
