@@ -161,12 +161,12 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
 EMAIL_USE_TLS = 'True'
 
-EMAIL_HOST_USER = 'jiaqi.zhao24@gmail.com'  
+EMAIL_HOST_USER = ''  
 EMAIL_HOST_PASSWORD = ''
 
 # AWS credentials
 
-AWS_ACCESS_KEY_ID = "AKIAY5IOC2UAXUTJVCXZ"
+AWS_ACCESS_KEY_ID = ""
 AWS_SECRET_ACCESS_KEY = ""
 
 # S3 configuration settings
@@ -198,7 +198,7 @@ DATABASES = {
 
         'PASSWORD': '',
 
-        'HOST': 'database-1.c35sljsidszq.us-west-1.rds.amazonaws.com',
+        'HOST': '',
 
         'PORT': '5432',
 
