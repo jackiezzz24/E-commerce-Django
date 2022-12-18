@@ -162,16 +162,16 @@ EMAIL_PORT = '587'
 EMAIL_USE_TLS = 'True'
 
 EMAIL_HOST_USER = 'jiaqi.zhao24@gmail.com'  
-EMAIL_HOST_PASSWORD = 'znzkxmkgwqilgbft'
+EMAIL_HOST_PASSWORD = ''
 
 # AWS credentials
 
-AWS_ACCESS_KEY_ID = "AKIAY5IOC2UATT2EHK6D"
-AWS_SECRET_ACCESS_KEY = "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"
+AWS_ACCESS_KEY_ID = "AKIAY5IOC2UAXUTJVCXZ"
+AWS_SECRET_ACCESS_KEY = ""
 
 # S3 configuration settings
 
-AWS_STORAGE_BUCKET_NAME = 'smartcart-1'
+AWS_STORAGE_BUCKET_NAME = 'smartcartapp-1'
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
@@ -196,9 +196,9 @@ DATABASES = {
 
         'USER': 'postgres',
 
-        'PASSWORD': 'smartcartapp',
+        'PASSWORD': '',
 
-        'HOST': 'database-smartcart.c0pngpcjp66g.us-west-2.rds.amazonaws.com',
+        'HOST': 'database-1.c35sljsidszq.us-west-1.rds.amazonaws.com',
 
         'PORT': '5432',
 
