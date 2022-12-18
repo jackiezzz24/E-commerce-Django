@@ -198,7 +198,7 @@ DATABASES = {
 
         'PASSWORD': '',
 
-        'HOST': 'database-smartcart.c0pngpcjp66g.us-west-2.rds.amazonaws.com',
+        'HOST': 'database-1.c35sljsidszq.us-west-1.rds.amazonaws.com',
 
         'PORT': '5432',
 
