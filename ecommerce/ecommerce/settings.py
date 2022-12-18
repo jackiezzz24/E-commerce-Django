@@ -23,10 +23,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-5!cw*crgzi$zz2npdaoox0%j(2h#--lhn2^+as=dk&-1jjj$va'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ecommerce-app-dev.us-west-1.elasticbeanstalk.com', 'smartcart.click', 'www.smartcart.click', 'localhost', '127.0.0.1', '*']
 
+CSRF_TRUSTED_ORIGINS = ['https://www.smartcart.click']
+
+# Set allowed cidr nets
+
+ALLOWED_CIDR_NETS = ['172.17.0.0/16']
 
 # Application definition
 
@@ -43,6 +48,7 @@ INSTALLED_APPS = [
     'payment', #Django app
     'mathfilters',
     'crispy_forms',
+    'storages',
 ]
 
 # Unblock Paypal popups
@@ -52,6 +58,9 @@ SECURE_CROSS_ORIGIN_OPENER_POLICY='same-origin-allow-popups'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
+    # Allow CIDR ranegs
+    'allow_cidr.middleware.AllowCIDRMiddleware',
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -87,12 +96,12 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation
@@ -155,3 +164,45 @@ EMAIL_USE_TLS = 'True'
 EMAIL_HOST_USER = 'jiaqi.zhao24@gmail.com'  
 EMAIL_HOST_PASSWORD = 'znzkxmkgwqilgbft'
 
+# AWS credentials
+
+AWS_ACCESS_KEY_ID = "AKIAY5IOC2UATT2EHK6D"
+AWS_SECRET_ACCESS_KEY = "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"
+
+# S3 configuration settings
+
+AWS_STORAGE_BUCKET_NAME = 'smartcart-1'
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+AWS_S3_FILE_OVERWRITE = False
+
+# Admin styling adjustment 
+
+ADMIN_MEDIA_PREFIX = '/static/admin/'
+
+# RDS Database configuration settings:
+
+DATABASES = {
+
+    'default': {
+
+        'ENGINE': 'django.db.backends.postgresql',
+
+        'NAME': 'demo_1',
+
+        'USER': 'postgres',
+
+        'PASSWORD': 'smartcartapp',
+
+        'HOST': 'database-smartcart.c0pngpcjp66g.us-west-2.rds.amazonaws.com',
+
+        'PORT': '5432',
+
+
+    }
+
+}
