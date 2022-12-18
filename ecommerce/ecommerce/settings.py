@@ -198,7 +198,7 @@ DATABASES = {
 
         'PASSWORD': '',
 
-        'HOST': '',
+        'HOST': 'database-1.c35sljsidszq.us-west-1.rds.amazonaws.com',
 
         'PORT': '5432',
 
