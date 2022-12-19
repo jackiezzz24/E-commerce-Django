@@ -5,9 +5,6 @@
 +	Designed the RESTful APIs for the whole system and implemented the backend with Python Django.
 +	Utilized AJAX redirection to clear the shopping cart. Used AWS S3 as file server to implement multimedia content streaming, AWS IAM to securely control access to AWS resources, and Elastic Beanstalk to monitor capacity provisioning and auto scaling.
 
-## App Link 
-[Smart Cart](https://www.smartcart.click/)
-
 ## App Screenshots
 
 Main page
