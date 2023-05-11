@@ -5,6 +5,16 @@
 +	Designed the RESTful APIs for the whole system and implemented the backend with <b>Python Django</b>.
 +	Utilized <b>AJAX</b> redirection to clear the shopping cart. Used <b>AWS S3</b> as file server to implement multimedia content streaming, <b>AWS IAM</b> to securely control access to AWS resources, and <b>Elastic Beanstalk</b> to monitor capacity provisioning and auto scaling.
 
+## How to run the program
+
+In the project directory, you can run:
+### `venv\Scripts\activate`
+to enter the virtual environment
+### `python manage.py runserver`
+
+Runs the app in the development mode.\
+Open http://127.0.0.1:8000/ to view it in the browser.
+
 ## App Screenshots
 
 ### `Main page`
