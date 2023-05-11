@@ -1,9 +1,9 @@
 # Full Stack E-commerce Application
 
 +	Implemented an E-commerce Store application that allows users to manage their carts for shopping, registration, reset password with email verification, and use PayPal gateway to complete checkout functionality.
-+	Developed the front-end with JavaScript based on a UI framework named Bootstrap to create web pages. 
-+	Designed the RESTful APIs for the whole system and implemented the backend with Python Django.
-+	Utilized AJAX redirection to clear the shopping cart. Used AWS S3 as file server to implement multimedia content streaming, AWS IAM to securely control access to AWS resources, and Elastic Beanstalk to monitor capacity provisioning and auto scaling.
++	Developed the front-end with <b>JavaScript</b> based on a UI framework named Bootstrap to create web pages. 
++	Designed the RESTful APIs for the whole system and implemented the backend with <b>Python Django</b>.
++	Utilized <b>AJAX</b> redirection to clear the shopping cart. Used <b>AWS S3</b> as file server to implement multimedia content streaming, <b>AWS IAM</b> to securely control access to AWS resources, and <b>Elastic Beanstalk</b> to monitor capacity provisioning and auto scaling.
 
 ## App Screenshots
 
